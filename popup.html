@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Page Screenshot</title>
+  <style>
+    body { width: 300px; padding: 10px; font-family: Arial, sans-serif; }
+    button { width: 100%; padding: 10px; margin-top: 10px; }
+    #progressContainer { display: none; margin-top: 10px; }
+    #progressBar { width: 0%; height: 20px; background-color: #4CAF50; text-align: center; line-height: 20px; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Full Page Screenshot</h1>
+  <button id="captureBtn">Capture Full Page</button>
+  <div id="progressContainer">
+    <div id="progressBar">
+      <span id="progressText">0%</span>
+    </div>
+  </div>
+  <p id="statusText"></p>
+  <script src="popup.js"></script>
+  <script>
+    console.log('popup.html loaded');
+    document.getElementById('captureBtn').addEventListener('click', function() {
+      console.log('Capture button clicked (from inline script)');
+    });
+  </script>
+</body>
+</html>
